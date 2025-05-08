@@ -64,7 +64,7 @@ const WeatherDetails =({icon,temp,city,country,lat,long , humidity , wind}) =>{
 
 // }
 function App() {
-  let api_key = "acbd4857321882a1746caf90e3f837e8";
+  let api_key = " ";
   const [text,setText] = useState("Chennai");
   const [icon, setIcon] = useState(snowIcon);
   const [temp, setTemp] = useState(0);
@@ -104,7 +104,7 @@ function App() {
   
   const search =async () => {
     setLoading(true);
-    let api_key = "acbd4857321882a1746caf90e3f837e8"
+    let api_key = ""
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${api_key}&units=Metric`;
     try {
       let res = await fetch(url);
